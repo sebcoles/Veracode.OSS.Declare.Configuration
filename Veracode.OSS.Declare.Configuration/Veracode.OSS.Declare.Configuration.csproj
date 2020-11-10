@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<PackageId>Veracode.OSS.Declare.Configuratino</PackageId>
+		<Authors>sebcoles</Authors>
+		<Company>Veracode OSS</Company>
+		<PackageTags>Veracode;OSS;VeracodeDeclare;GitOps;VeracodeOSS;</PackageTags>
+		<RepositoryUrl>https://github.com/sebcoles/Veracode.OSS.Declare.Configuration</RepositoryUrl>
+		<Description>
+			Shared library for working with Veracode Declare configuration files.
+		</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+	<Target Name="NugetPackAutoVersioning" AfterTargets="Build">
+		<Exec Command="dotnet pack -p:PackageVersion=$([System.DateTime]::Now.ToString(&quot;yyyy.MM.dd.HHmmss&quot;)) --no-build --configuration $(Configuration)" />
+	</Target>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>
