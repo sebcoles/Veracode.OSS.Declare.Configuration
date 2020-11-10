@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
-		<PackageId>Veracode.OSS.Declare.Configuratino</PackageId>
+		<PackageId>Veracode.OSS.Declare.Configuration</PackageId>
 		<Authors>sebcoles</Authors>
 		<Company>Veracode OSS</Company>
 		<PackageTags>Veracode;OSS;VeracodeDeclare;GitOps;VeracodeOSS;</PackageTags>
