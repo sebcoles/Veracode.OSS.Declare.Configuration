@@ -13,6 +13,11 @@ jobs:
     name: Build and NuGet Publish for Veracode.OSS.Declare.Configuration for ${{ matrix.dotnet }}
     steps:
       - uses: actions/checkout@v2
+      - name: Run Unit Tests
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ matrix.dotnet }}
+      - run: dotnet test Veracode.OSS.Declare.Configuration/
       - name: Setup dotnet
         uses: actions/setup-dotnet@v1
         with:
