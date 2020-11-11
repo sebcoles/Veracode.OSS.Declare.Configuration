@@ -17,12 +17,6 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ matrix.dotnet }}
-          source-url: https://api.nuget.org/v3/index.json
-        env:
-          NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}} 
       - run: dotnet build --configuration Release Veracode.OSS.Declare.Configuration/Veracode.OSS.Declare.Configuration.csproj
       - name: Push generated package to NuGet
-        run: dotnet nuget push Veracode.OSS.Declare.Configuration/bin/Release/*.nupkg --skip-duplicate --no-symbols true
-
-
- 
+        run: dotnet nuget push Veracode.OSS.Declare.Configuration/bin/Release/*.nupkg --skip-duplicate --no-symbols true --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_API_KEY}} 
