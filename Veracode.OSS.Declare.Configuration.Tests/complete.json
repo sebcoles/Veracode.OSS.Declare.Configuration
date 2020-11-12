@@ -11,16 +11,14 @@
           "location": "Assets/verademo.war"
         }
       ],
-      "download": [
+      "download": [        
         {
-          "provider": {
-            "name": "artifactory",
-            "files" : [
-              {
-                "location": "Assets/verademo.war"
-              }
-            ]
-          }
+          "name": "artifactory",
+          "files": [
+            {
+              "location": "Assets/verademo.war"
+            }
+          ]
         }
       ],
       "modules": [

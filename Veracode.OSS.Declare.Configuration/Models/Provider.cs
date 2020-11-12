@@ -6,7 +6,7 @@ namespace Veracode.OSS.Declare.Configuration.Models
 {
     public class Provider
     {
-        public string Name { get; set; }
-        public File[] Files { get; set; }
+        public string name { get; set; }
+        public List<File> files { get; set; }
     }
 }
